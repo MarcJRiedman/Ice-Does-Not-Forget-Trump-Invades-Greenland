@@ -120,6 +120,86 @@
       pointer-events:none;
     }
 
+/* --- Mobile improvements (phones) --- */
+@media (max-width: 600px){
+
+  .wrap{
+    padding:18px 14px 44px;
+  }
+
+  /* Topbar stacks */
+  .topbar{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
+    padding:10px 0 14px;
+  }
+
+  .brand span{
+    white-space:normal;   /* allow wrapping instead of ellipsis */
+    overflow:visible;
+    text-overflow:clip;
+    line-height:1.35;
+  }
+
+  /* CTAs: full width, easier to tap */
+  .cta-row{
+    width:100%;
+  }
+  .cta-row .btn{
+    width:100%;
+    justify-content:center;
+    padding:12px 14px;
+  }
+
+  /* Cards breathe less on phone */
+  .card{
+    padding:16px;
+    border-radius:18px;
+  }
+
+  /* Headings / text */
+  h1{
+    font-size:32px;
+    line-height:1.08;
+  }
+  .subtitle{
+    font-size:16px;
+    line-height:1.6;
+    max-width:unset;
+  }
+
+  /* Chips: smaller and more compact */
+  .chips{
+    gap:8px;
+  }
+  .chip{
+    font-size:11px;
+    padding:6px 9px;
+  }
+
+  /* Your aside buttons row (View on Amazon / Details) */
+  aside .btn{
+    width:100%;
+    justify-content:center;
+    padding:12px 14px;
+  }
+
+  /* Cover image: keep it centered and not too huge */
+  .book-cover{
+    max-width:320px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  /* Footer stacks nicely */
+  .footer{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:8px;
+  }
+}
+
     h1{
       font-size: clamp(30px, 4.2vw, 52px);
       margin:0 0 10px;
@@ -278,7 +358,7 @@
 
           <!-- OPTION A: local file (recommended if you host the file next to index.html) -->
       <audio controls preload="metadata">
- 	 <source src="Chapter_2.m4a" type="audio/mpeg">
+ 	 <source src="Chapter_2.m4a" type="audio/mp4">
   	Your browser does not support the audio element.
 	</audio>
 
@@ -306,11 +386,11 @@
         <p class="sr-only">
           Trump Invades Greenland Kindle ebook paperback Amazon B0GJ311NGF.
         </p>
-<img
-  src="cover.jpg"
-  alt="Trump Invades Greenland book cover"
-  class="book-cover"
-/>
+
+<a href="https://www.amazon.com/dp/B0GJ311NGF" target="_blank" rel="noopener noreferrer">
+  <img src="cover.jpg" alt="Book cover: The Ice Does Not Forget" class="book-cover" />
+</a>
+
       </aside>
     </section>
 
